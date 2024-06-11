@@ -1,35 +1,17 @@
 <template>
-  <h1>Welcome</h1>
-  <ul>
-    <li v-for="project in projects" :key="project.id">
-      {{ project.title }}
-      <img :src="store.imgBasePath + project.image" :alt="project.title">
-    </li>
-  </ul>
+  <HeaderComponent />
+  <main class="container">
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
-import { store } from "./store";
-import axios from "axios";
+import HeaderComponent from "./components/HeaderComponent.vue";
+
 export default {
   name: "App",
-  data() {
-    return {
-      store,
-      projects: [],
-    };
-  },
-  methods: {
-    getAllProjects() {
-      axios.get(this.store.apiBaseUrl + "/projects").then((res) => {
-          console.log(res.data);
-          console.log(res.data.results.image);
-          this.projects = res.data.results;
-        })
-    },
-  },
-  mounted() {
-    this.getAllProjects();
+  components: {
+    HeaderComponent,
   },
 };
 </script>
