@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <router-link to="/" class="navbar-brand">
-                    <i class="fa-solid fa-store"></i>MyBoolpress
+                    <i class="bi bi-box"></i>Boolfolio
                 </router-link>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -48,6 +48,7 @@ export default {
           routeName: "projects",
         }
       ],
+      show: false,
     };
   },
 };
