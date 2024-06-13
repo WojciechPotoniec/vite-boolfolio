@@ -46,6 +46,14 @@ export default {
         {
           label: "Projects",
           routeName: "projects",
+        },
+        {
+          label: "Contact Us",
+          routeName: "contact",
+        },
+        {
+          label: "About Us",
+          routeName: "about",
         }
       ],
       show: false,
